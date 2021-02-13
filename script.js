@@ -166,6 +166,24 @@ const mainDiv = document.createElement("div");
 mainDiv.id = "mainDiv";
 document.body.appendChild(mainDiv);
 
+let selectElem = document.createElement("select");
+selectElem.id = "selectElem";
+selectElem.onchange = function() {
+    document.body.style.backgroundColor = this.value;
+    console.log(this.value);
+}
+mainDiv.appendChild(selectElem)
+
+for (color of colors) {
+    // console.log(color);
+
+    let optionElem = document.createElement("option");
+    optionElem.value = color;
+    optionElem.innerText = color;
+    selectElem.appendChild(optionElem);
+
+}
+
 let inputElem = document.createElement("input");
 inputElem.type = "text";
 inputElem.id = "inputElem";

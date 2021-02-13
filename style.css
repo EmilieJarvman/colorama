@@ -31,10 +31,17 @@ body {
 	flex-wrap: wrap;
 }
 
+#selectElem {
+	border-style: none;
+	border-radius: 5px;
+	text-align: center;
+}
+
 #inputElem {
 	border-style: none;
 	border-radius: 5px;
 	text-align: center;
+	margin-left: 5px;
 }
 
 #button {
