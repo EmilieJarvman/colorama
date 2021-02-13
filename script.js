@@ -1,14 +1,8 @@
 /*
-1: Inputfält & button 
-2: bakgrundsfärg i div eller body?
-3: document.body.style.backgroundColor = "green"; måste kopplas ihop med input/button samt array för att hämta rätt ord? Behövdes "egentligen" arrayen? Eller hade man kunnat göra att vad som än skrivs i input hamnar i style.ba.. "ord", men att färgen bara ändras om det faktiskt finns en sån färg med det ordet. 
+Kvar att göra:
+Del 2: Felmeddelande om färgen inte finns.
+Del 3: Spara senast använda färg i localStorage
 */
-
-// Del 2: Array med färgerna. Felmeddelande om färgen inte finns. Visa även upp färgerna på ngt sätt. 
-
-// Del 3: Spara senast använda färg i localStorage
-
-
 
 
 let colors = [
@@ -175,23 +169,21 @@ selectElem.onchange = function() {
 mainDiv.appendChild(selectElem)
 
 for (color of colors) {
-    // console.log(color);
-
     let optionElem = document.createElement("option");
     optionElem.value = color;
     optionElem.innerText = color;
     selectElem.appendChild(optionElem);
-
 }
 
 let inputElem = document.createElement("input");
 inputElem.type = "text";
+inputElem.placeholder = "name of color";
 inputElem.id = "inputElem";
 mainDiv.appendChild(inputElem);
 
 let buttonElem = document.createElement("button");
 //Skillnaden mellan textContent och innerText?
-buttonElem.textContent= "Change color";
+buttonElem.textContent = "Change color";
 buttonElem.id = "button";
 buttonElem.onclick = render;
 mainDiv.appendChild(buttonElem);
@@ -202,9 +194,7 @@ let colorText = document.createElement("h1");
     mainDiv.appendChild(colorText);
 
 function render() {
-    let colorChanger = inputElem.value;
-    // placehpolder för att se att det händer ngt
-    
+    let colorChanger = inputElem.value;    
     colorText.innerHTML = colorChanger;
     document.body.style.backgroundColor = colorChanger;
 }
