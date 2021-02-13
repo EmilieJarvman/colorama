@@ -162,20 +162,26 @@ let colors = [
     "YellowGreen"
 ]
 
+const mainDiv = document.createElement("div");
+mainDiv.id = "mainDiv";
+document.body.appendChild(mainDiv);
 
 let inputElem = document.createElement("input");
 inputElem.type = "text";
 inputElem.id = "inputElem";
-document.body.appendChild(inputElem);
+mainDiv.appendChild(inputElem);
 
 let buttonElem = document.createElement("button");
 //Skillnaden mellan textContent och innerText?
 buttonElem.textContent= "Change color";
+buttonElem.id = "button";
 buttonElem.onclick = render;
-document.body.appendChild(buttonElem);
+mainDiv.appendChild(buttonElem);
+
 
 let colorText = document.createElement("h1");
-    document.body.appendChild(colorText);
+    colorText.id = "text";
+    mainDiv.appendChild(colorText);
 
 function render() {
     let colorChanger = inputElem.value;

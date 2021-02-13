@@ -1,0 +1,68 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+}
+
+#menuDiv {
+	background-color: #260101;
+	color: #bf9a78;
+	font-size: 28px;
+	display: flex;
+	justify-content: center;
+	padding: 50px;
+	text-transform: uppercase;
+}
+
+#mainDiv {
+	background-color: #4c5954;
+	display: flex;
+	justify-content: center;
+	padding: 40px;
+	flex-wrap: wrap;
+}
+
+#inputElem {
+	border-style: none;
+	border-radius: 5px;
+	text-align: center;
+}
+
+#button {
+	background-color: #260101;
+	color: white;
+	border-style: none;
+	border-radius: 5px;
+	padding: 10px;
+	text-transform: capitalize;
+	margin-left: 5px;
+}
+
+#button:hover {
+	background-color: #0d0d0d;
+}
+
+#text {
+	margin-top: 40px;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+
+/*
+COLORS
+#4C5954
+#BF9A78
+#8C593B
+#260101
+#0D0D0D
+*/
